@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix Data Analysis System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>NETFLIX <span>ANALYTICS</span></h1>
+        <p>Data Analysis Dashboard</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Netflix Content Overview</h2>
+            <p>Explore movies, TV shows and content insights.</p>
+        </section>
+
+        <!-- Dashboard Cards -->
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total Titles</h3>
+                <p id="totalTitles">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Movies</h3>
+                <p id="totalMovies">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>TV Shows</h3>
+                <p id="totalShows">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Countries</h3>
+                <p id="totalCountries">Loading...</p>
+            </div>
+
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <h2>Search Netflix Titles</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter movie or TV show name..."
+                >
+
+                <button onclick="searchNetflix()">Search</button>
+            </div>
+
+            <div id="searchResults" class="search-results"></div>
+
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+
+            <h2>Netflix Data Visualizations</h2>
+
+            <div class="charts-grid">
+
+                <div class="chart-card">
+                    <h3>Movies vs TV Shows</h3>
+                    <canvas id="typeChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Top 10 Genres</h3>
+                    <canvas id="genreChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Top 10 Countries</h3>
+                    <canvas id="countryChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Titles by Release Year</h3>
+                    <canvas id="yearChart"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About Project -->
+        <section class="content">
+
+            <h2>About This Project</h2>
+
+            <p>
+                This Netflix Data Analysis System analyzes Netflix
+                content data to discover trends in movies, TV shows,
+                genres, countries and release years.
+
+                It uses Python, Flask, Pandas, HTML, CSS,
+                JavaScript and Chart.js to display interactive
+                data visualizations and search results.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Netflix Data Analysis System | Minor Project</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
