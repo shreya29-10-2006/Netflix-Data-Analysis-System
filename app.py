@@ -5,16 +5,21 @@ import os
 
 app = Flask(__name__)
 
+
 # Project paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DATASET_PATH = os.path.join(
-    BASE_DIR, "..", "dataset", "netflix_titles.csv"
-)
-
-FRONTEND_DIR = os.path.abspath(
-    os.path.join(BASE_DIR, "..", "frontend")
-)
+# Check whether files are in the same folder
+if os.path.exists(os.path.join(BASE_DIR, "netflix_titles.csv")):
+    DATASET_PATH = os.path.join(BASE_DIR, "netflix_titles.csv")
+    FRONTEND_DIR = BASE_DIR
+else:
+    DATASET_PATH = os.path.join(
+        BASE_DIR, "..", "dataset", "netflix_titles.csv"
+    )
+    FRONTEND_DIR = os.path.abspath(
+        os.path.join(BASE_DIR, "..", "frontend")
+    )
 
 # Load Netflix dataset
 df = pd.read_csv(DATASET_PATH)
