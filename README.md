@@ -25,16 +25,13 @@ The Netflix Data Analysis System is a web-based dashboard developed to explore a
 ```text
 Netfix_minior_project/
 │
-├── backend/
-│   └── app.py
+├── backend/app.py
 │
-├── dataset/
-│   └── netflix_titles.csv
+├── dataset/ netflix_titles.csv
 │
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+├── frontend/index.html
+├──frontend/ style.css
+├──│frontend/script.js
 │
 ├── database/
 │
